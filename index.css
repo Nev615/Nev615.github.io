@@ -1,3 +1,7 @@
 .headerstyle {
     background-color: var(--bs-tertiary-bg);
 }
+
+body {
+    border: 5px red;
+}
