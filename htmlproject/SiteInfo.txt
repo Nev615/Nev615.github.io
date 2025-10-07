@@ -1,0 +1,21 @@
+Geopolitics:
+  Location
+  Important Cities or Regions
+  Economy
+  National Symbols
+
+History:
+  History
+
+Famous Locations:
+  Famous Locations / Sites
+
+Environment:
+  Climate
+  National Features
+
+Culture:
+  Demographics
+  Famous People 
+  Culture
+  Date + Time

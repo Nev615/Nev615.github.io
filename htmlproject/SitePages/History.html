@@ -1,0 +1,157 @@
+<!--THIS PAGE IS WRITTEN USING FLEX-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Culture</title>
+  <style>
+    #HeaderImg {
+      width: 100%;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      padding: 2rem;
+    }
+
+    section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      border: 1px solid #ddd;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+
+    section>div {
+      flex: 1 1 300px;
+      padding: 1rem;
+      border: 1px solid #f0f0f0;
+      background: #f9f9f9;
+      border-radius: 4px;
+    }
+
+    h1,
+    h2 {
+      color: #333;
+    }
+
+    p {
+      color: #555;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background: white;
+      padding: 1rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: black;
+      font-size: 1.2rem;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+    }
+
+    nav a:hover {
+      background: gray;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+      }
+
+      nav a {
+        margin: 0.5rem 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <a href="../index.html">Home</a>
+    <a href="Geopolitics.html">Geopolitics</a>
+    <a href="History.html">History</a>
+    <a href="FamousLocations.html">Famous Locations</a>
+    <a href="Environment.html">Environment</a>
+    <a href="culture.html">Culture</a>
+  </nav>
+  <img id="HeaderImg" src="EgyptCulture.jpg" alt="Egyptian Image of Culture" />
+
+  <main>
+    <section>
+      <h2>Ancient Egypt</h2>
+      <div>
+        <p>
+          Ancient Egypt, spanning from 3100 BCE to 332 BCE, is renowned for
+          its monumental achievements, including the Pyramids of Giza, the
+          Sphinx, and advances in mathematics, medicine, and writing
+          (hieroglyphics).
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Greco-Roman Period</h2>
+      <div>
+        <p>
+          Beginning in 332 BCE with Alexander the Great's conquest, Egypt
+          became a center of Greek and Roman culture. The city of Alexandria
+          emerged as a hub of learning and trade.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Islamic Period</h2>
+      <div>
+        <p>
+          After the Arab conquest in 641 CE, Egypt became a leading Islamic
+          cultural and economic center. Cairo, established in 969 CE, remains
+          a symbol of this era.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Ottoman and Modern Period</h2>
+      <div>
+        <p>
+          Under Ottoman rule from 1517 to the 19th century, Egypt served as a
+          strategic province. Modernization began during Muhammad Ali's rule,
+          paving the way for independence in the 20th century.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Contemporary History</h2>
+      <div>
+        <p>
+          Modern Egypt was shaped by the 1952 revolution, leading to the
+          establishment of the Republic. Key events include the construction
+          of the Aswan High Dam and Egypt's pivotal role in Middle Eastern
+          geopolitics.
+        </p>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>

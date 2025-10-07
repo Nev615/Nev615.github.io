@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .imghome {
+            width: 50%;
+            border: 2px solid;
+            border-radius: 8px;
+        }
+
+        .cardtitle {
+            font-size: 150%;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .ads {
+            display: none;
+        }
+
+        .footer {
+            font-size: 125%;
+            display: flex;
+            justify-content: space-between;
+            background-color: rgb(72, 110, 120);
+            padding: 5px;
+            color: beige;
+            border-radius: 8px;
+        }
+
+        .recipepic {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .rfootcard:not(:first-child) {
+            background-color: rgba(117, 29, 29, 0.925);
+            border: 2px solid beige;
+            color: bisque;
+        }
+
+        .rfootcard {
+            background-color: rgba(113, 73, 0, 0.664);
+            border: 2px solid beige;
+            color: bisque;
+            width: 45%;
+            border-radius: 8px;
+            margin: 15px;
+            padding: 5px;
+        }
+
+        .rfoottitle {
+            text-align: center;
+            font-size: 115%;
+            font-weight: bold;
+            color: bisque;
+        }
+
+        a {
+            color: gold;
+        }
+
+        @media screen and (max-width: 767px) {
+            .background {
+                background-color: rgb(0, 87, 87);
+            }
+
+            .mainbody {
+                display: grid;
+                grid-template-columns: auto;
+                grid-template-rows: auto auto auto;
+                margin: 2px;
+            }
+
+            .tabwrap div {
+                border: 2px solid rgb(189, 169, 144);
+                background-color: rgb(58, 76, 80);
+                border-radius: 8px;
+                margin: 2px;
+                text-align: center;
+                padding: 5px;
+            }
+
+            .tabwrap {
+                width: auto;
+                grid-row: 2;
+                display: grid;
+                grid-template-columns: 25% 25% 25% 25%;
+            }
+
+            .header {
+                text-align: center;
+                font-size: 200%;
+                padding: 30px;
+                background-color: rgb(72, 110, 120);
+                color: beige;
+                border-radius: 8px;
+            }
+
+            .card {
+                border: 2px solid;
+                margin: 2px;
+                width: 65%;
+                padding: 15px;
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                color: beige;
+                background-color: darkslategray;
+                border-radius: 8px;
+            }
+
+            .deck {
+                grid-column: 1;
+                justify-items: center;
+            }
+
+            .recipecard {
+                grid-column: 1;
+                grid-row: 3;
+                display: grid;
+                grid-template-columns: auto;
+            }
+
+            .rfoot {
+                justify-items: center;
+            }
+
+            .imgrecipe {
+                width: 55%;
+                padding: 20px;
+                background-color: black;
+                border-radius: 8px;
+            }
+
+            .recipetitle {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                padding: 15px;
+                margin: 2px;
+                font-size: 150%;
+                background-color: darkslategrey;
+                color: beige;
+                border-radius: 8px;
+            }
+
+            .recipesum {
+                display: flex;
+                justify-content: space-between;
+                margin: 2px;
+                margin-top: 4px;
+                margin-bottom: 10px;
+                padding: 10px;
+                background-color: darkslategray;
+                color: beige;
+                border-radius: 8px;
+            }
+
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1152px) {
+            .background {
+                background-color: rgb(40, 12, 67);
+            }
+
+            .background>* {
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+
+            .mainbody {
+                display: grid;
+                grid-template-columns: auto auto auto auto;
+                grid-template-rows: auto auto auto;
+                margin: 2px;
+
+            }
+
+            .tabwrap div {
+                border: 2px solid rgb(189, 169, 144);
+                background-color: rgb(58, 76, 80);
+                border-radius: 8px;
+                margin: 2px;
+                text-align: center;
+                padding: 5px;
+                font-size: 125%;
+            }
+
+            .tabwrap {
+                width: auto;
+                grid-column: span 4;
+                display: grid;
+                grid-template-columns: 25% 25% 25% 25%;
+            }
+
+            .header {
+                text-align: center;
+                font-size: 250%;
+                padding: 30px;
+                background-color: rgb(72, 110, 120);
+                color: beige;
+                border-radius: 8px;
+                grid-column: span 4;
+            }
+
+            .card {
+                border: 2px solid;
+                margin: 2px;
+                width: 85%;
+                padding: 15px;
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                color: beige;
+                background-color: darkslategray;
+                border-radius: 8px;
+                font-size: 125%;
+            }
+
+            .deck {
+                display: grid;
+                grid-template-columns: auto auto;
+                grid-column: 2/4;
+                justify-items: center;
+            }
+
+            .recipecard {
+                grid-column: span 4;
+                grid-row: 3;
+                display: grid;
+                grid-template-columns: auto;
+            }
+
+            .imgrecipe {
+                width: 45%;
+                padding: 20px;
+                padding-left: 27%;
+                padding-right: 27%;
+                background-color: black;
+                border-radius: 8px;
+            }
+
+            .rfoot {
+                display: flex;
+                justify-content: center;
+            }
+
+            .recipetitle {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                padding: 15px;
+                margin: 2px;
+                font-size: 200%;
+                background-color: darkslategrey;
+                color: beige;
+                border-radius: 8px;
+            }
+
+            .recipesum {
+                display: flex;
+                justify-content: space-between;
+                margin: 2px;
+                margin-top: 4px;
+                margin-bottom: 10px;
+                padding: 10px;
+                background-color: darkslategray;
+                color: beige;
+                border-radius: 8px;
+                font-size: 150%;
+            }
+
+            li {
+                font-size: 125%;
+            }
+
+            .rfoottitle {
+                text-align: center;
+                font-size: 140%;
+                font-weight: bold;
+                color: bisque;
+            }
+
+            .footer {
+                font-size: 150%;
+                display: flex;
+                justify-content: space-between;
+                background-color: rgb(72, 110, 120);
+                padding: 5px;
+                color: beige;
+                border-radius: 8px;
+            }
+
+        }
+
+        @media screen and (min-width: 1152px) {
+            .background {
+                background-color: rgb(31, 46, 74);
+            }
+
+            .background>* {
+                font-family: fantasy;
+            }
+
+            .mainbody {
+                display: grid;
+                grid-template-columns: 20% auto;
+                grid-template-rows: auto auto auto;
+                margin: 2px;
+
+            }
+
+            .header {
+                text-align: center;
+                font-size: 300%;
+                padding: 30px;
+                background-color: rgb(72, 110, 120);
+                color: beige;
+                border-radius: 8px;
+                grid-column: span 4;
+            }
+
+            .tabwrap {
+                grid-column: 1;
+                grid-row: 2;
+            }
+
+            .tabwrap div {
+                border: 2px solid rgb(189, 169, 144);
+                background-color: rgb(58, 76, 80);
+                border-radius: 8px;
+                margin: 2px;
+                text-align: center;
+                padding: 5px;
+                font-size: 150%;
+            }
+
+            .card {
+                border: 2px solid;
+                margin: 2px;
+                width: 85%;
+                padding: 15px;
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                color: beige;
+                background-color: darkslategray;
+                border-radius: 8px;
+                font-size: 150%;
+            }
+
+            .deck {
+                display: grid;
+                grid-template-columns: auto auto auto;
+                grid-column: 2/5;
+                grid-row: span 2;
+                justify-items: center;
+            }
+
+            .ads {
+                grid-column: 1;
+                grid-row: 3;
+                align-content: end;
+                display: list-item;
+            }
+
+            .ads>div {
+                border: 2px dashed rgb(189, 169, 144);
+                background-color: rgb(58, 76, 80);
+                border-radius: 8px;
+                margin: 5px;
+                text-align: center;
+                padding: 5px;
+                color: beige;
+                font-size: 100%;
+            }
+
+            .recipecard {
+                grid-column: 2;
+                grid-row: 2/4;
+                display: grid;
+                grid-template-columns: auto;
+            }
+
+            .imgrecipe {
+                width: 35%;
+                padding: 20px;
+                background-color: black;
+                border-radius: 8px;
+            }
+
+            .rfoot {
+                display: flex;
+                justify-content: center;
+            }
+
+            .rfootcard {
+                background-color: rgba(113, 73, 0, 0.664);
+                border: 2px solid beige;
+                color: bisque;
+                width: 35%;
+                border-radius: 8px;
+                margin: 5px;
+            }
+
+            .recipetitle {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                padding: 15px;
+                margin: 2px;
+                font-size: 250%;
+                background-color: darkslategrey;
+                color: beige;
+                border-radius: 8px;
+            }
+
+            .recipesum {
+                display: flex;
+                justify-content: space-between;
+                margin: 2px;
+                margin-top: 4px;
+                margin-bottom: 10px;
+                padding: 10px;
+                background-color: darkslategray;
+                color: beige;
+                border-radius: 8px;
+                font-size: 200%;
+            }
+
+            li {
+                font-size: 150%;
+            }
+
+            .rfoottitle {
+                text-align: center;
+                font-size: 165%;
+                font-weight: bold;
+                color: bisque;
+            }
+
+            .footer {
+                font-size: 175%;
+                display: flex;
+                justify-content: space-between;
+                background-color: rgb(72, 110, 120);
+                padding: 5px;
+                color: beige;
+                border-radius: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mainbody">
+        <div class="header">My Recipes</div>
+
+        <div class="tabwrap">
+            <div class="button"><a href="index.html">Home</a></div>
+            <div class="button"><a href="https://www.dictionary.com/browse/Contact">Contact</a> </div>
+            <div class="button"><a href="https://www.allrecipes.com/">Links</a> </div>
+            <div><a href="About.html">About</a></div>
+        </div>
+
+        <div class="deck">
+            <div class="card">
+                <img class="imghome" src="A7Pictures/Pickled Eggs.jpg" alt="Pickled Eggs.jpg">
+                <div class="cardtitle"><a href="Recipe 1.html">Pickled Eggs</a></div>
+                <div>Tired of scrambling or frying eggs? Want to appear suave and sophisticated? Try these out. They
+                    also
+                    taste good.</div>
+            </div>
+            <div class="card">
+                <img class="imghome" src="A7Pictures/Chili.jpg" alt="Chili.jpg">
+                <div class="cardtitle"><a href="Recipe 2.html">Chili</a></div>
+                <div>Beans. Lots of beans. Plus whatever you have left over in your personal abbatoir. What? That's not
+                    weird.</div>
+            </div>
+            <div class="card">
+                <img class="imghome" src="A7Pictures/Pasta.jpg" alt="Pasta.jpg">
+                <div class="cardtitle"><a href="Recipe 3.html">Pasta</a></div>
+                <div>It's been scientifically proven that the Romans conquered the known world because of the power of
+                    this dish.</div>
+            </div>
+            <div class="card">
+                <img class="imghome" src="A7Pictures/Pork Chops.jpg" alt="Pork Chops.jpg">
+                <div class="cardtitle"><a href="Recipe 4.html">Pork Chops</a></div>
+                <div>Huff, puff, blow their house down. If their house is made of brick, bring an excavator. Then you
+                    have pork chops.</div>
+            </div>
+            <div class="card">
+                <img class="imghome" src="A7Pictures/Roasted Tomatoes.jpg" alt="Roasted Tomatoes.jpg">
+                <div class="cardtitle"><a href="Recipe 5.html">Roasted Tomatoes</a></div>
+                <div>The concrete of the culinary world, the foundation of so many recipes. Or just roast them and put
+                    them on bread.</div>
+            </div>
+            <div class="card">
+                <img class="imghome" src="A7Pictures/Spaghetti Squash.jpg" alt="Spaghetti Squash.jpg">
+                <div class="cardtitle"><a href="Recipe 6.html">Spaghetti Squash</a></div>
+                <div>This dish did not contribute to Roman expansion. However, it is still really good and easy to make.
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+</body>
+
+</html>
